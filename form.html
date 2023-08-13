@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+	<style>
+      /* CSS for the centered layout */
+	  html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* CSS for the form container */
+    .form-container {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* CSS for the 3D pink textarea */
+    .textarea {
+    display: flex;
+      border: none;
+      padding: 10px;
+      width: 300px;
+      height: 150px;
+      background-color: #f87fb7;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.3s;
+    }
+
+    .textarea:focus {
+      transform: translateZ(10px);
+      outline: none;
+    }
+
+    /* CSS for the baby blue dropdown list */
+    .font-dropdown {
+      margin-top: 0px;
+      padding: 10px;
+      width: 200px;
+      background-color: #aee3f7;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.3s;
+    }
+
+    .font-dropdown:focus {
+      transform: translateZ(10px);
+      outline: none;
+    }
+
+    /* CSS for the 3D pink submit button */
+    .submit-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #f87fb7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      transform: translateZ(10px);
+    }
+
+    /* CSS for the cool result box */
+    .result-box {
+      margin-top: 0px;
+      padding: 50px;
+      background-color: #aee9a7;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+	</style>
+</head>
+<body>
+	<form class="form-container" action="/" method="POST">
+		<label for="response">Response:</label>
+		<input type="textarea" class="textarea" id="response" name="response"><br><br>
+
+		<label for="option1">
+			<input type="radio" checked="checked" id="option1" name="option" value="standard" {{if .Option1}}checked{{end}}>standard
+		</label><br>
+		<label for="option2">
+			<input type="radio" id="option2" name="option" value="shadow" {{if .Option2}}checked{{end}}>shadow
+		</label><br>
+		<label for="option3">
+			<input type="radio" id="option3" name="option" value="Thinkertoy" {{if .Option3}}checked{{end}}>Thinkertoy
+		</label><br><br>
+		<!-- drop down -->
+		<select class="font-dropdown" id="font-dropdown">
+			<option value="standard" {{if .Option1}}selected{{end}}>standard</option>
+			<option value="shadow" {{if .Option2}}selected{{end}}>shadow</option>
+			<option value="Thinkertoy" {{if .Option3}}selected{{end}}>Thinkertoy</option>
+		  </select>
+		<!--  -->
+
+		<input class="submit-button" type="submit" value="Submit">
+	</form>
+
+	{{if .Response}}
+		<div class="result-box">
+			<h1>Response: {{.Response}}</h1>
+			{{if .SelectedOption}}
+				<p>Selected option: {{.SelectedOption}}</p>
+			{{end}}
+		</div>
+	{{end}}
+    <div class="result-box">
+		<pre>{{.FileContent}}</pre>
+    </div>
+	
+</body>
+</html>
