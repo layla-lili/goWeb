@@ -73,7 +73,7 @@ func main() {
 				fileContent = append(fileContent, string('\n'))
 
 			}
-			
+
 			if err := scanner.Err(); err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
@@ -93,13 +93,24 @@ func main() {
 				Option1:        selectedOption == "standard",
 				Option2:        selectedOption == "shadow",
 				Option3:        selectedOption == "ThinkerToy",
-				FileContent: strings.Trim(fmt.Sprintf("%v", fileContent), "[]"),
+				FileContent:    strings.Trim(fmt.Sprintf("%v", fileContent), "[]"),
 			}
 			tmpl.Execute(w, data)
+			
 			//fmt.Print("fileContent", fileContent)
 		} else {
 			tmpl := template.Must(template.ParseFiles("form.html"))
 			tmpl.Execute(w, nil)
+			// Handle 404 errors
+			http.HandleFunc("/404", func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusNotFound)
+				tmpl := template.Must(template.ParseFiles("404.html"))
+				tmpl.Execute(w, nil)
+			})
+
+			// Create a custom 404 handler
+			http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+			http.NotFoundHandler().ServeHTTP(w, r)
 		}
 	})
 
