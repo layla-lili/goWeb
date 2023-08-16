@@ -4,21 +4,21 @@
   <style>
     @keyframes templeWeedAnimation {
       0% {
-        left: -100px;
+        right: -100px;
         transform: rotate(0);
       }
       100% {
-        left: calc(100% + 100px);
+        right: calc(100% + 100px);
         transform: rotate(360deg);
       }
     }
 
-    .temple-weed {
+    .crazy {
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
       animation: templeWeedAnimation 5s linear infinite;
-      font-size: 50px;
+      font-size: 100px;
       color: green;
     }
     * {
@@ -59,41 +59,68 @@ body {
 
 /* Style the content */
 .content {
-  margin-left: 200px;
+  margin-left: 40%;
+  margin-right: 40%;
   padding-left: 20px;
+
+ 
+}
+.left-div {
+  float: left;
+  width: 50%;
+  background-image: url("https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif");
+  background-size:cover;
+  height: 100vh;
+}
+
+.right-div {
+  float: right;
+  width: 50%;
 }
 /* style image */
-.image-container {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  width: 100%; /* Set the width of the container */
-  height: 100vh; /* Set the height of the container (adjust as needed) */
+/* .image-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  width: 100%; 
+  height: 100vh;
 }
 
 .image-container img {
-  max-width: 100%; /* Set the maximum width of the image */
-  max-height: 100%; /* Set the maximum height of the image */
-  object-fit: contain; /* Scale the image to fit inside the container */
-}
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+} */
+
   </style>
 </head>
 <body>
- <div class="sidenav">
- <!-- <a href="#">Link</a>
+ <!-- <div class="sidenav">
+ <a href="#">Link</a>
   <a href="#">Link</a>
-  <a href="#">Link</a> -->
-  <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" />
-</div> 
+  <a href="#">Link</a>
+ 
+</div>  -->
+<h1  style="font-size: 50px; text-align: center;" >404</h1>
+<div style="display:flex; ">
+<div class="content" style="float: left;">
 
-<div class="content">
-  <h1  style="font-size: 50px;" >404</h1>
-  <p style="font-size: 50px;"> أنقلع من هنا</p>
-  <p style="font-size: 50px;"> أذلف </p>
-  <p style="font-size: 50px;" > ماعندك حياة يعني </p>
-  
-   <div class="temple-weed">😝</div>
+  <!-- <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" /> -->
+  <p style="font-size: 50px; text-align: center; color:orangered;"> أنقلع من هنا</p>
+  <div class="crazy">😝</div>
+<p style="font-size: 50px; text-align: center;"> أذلف </p>
+<p style="font-size: 50px; text-align: center;" > ماعندك حياة يعني </p>
+
+  <!-- <div><img src="https://gifdb.com/images/thumbnail/tumbleweed-emoji-desert-9f4ehclkun14re38.gif" /></div> -->
+ 
+</div >
+<div class="content" style="float: right;">
+  <p style="font-size: 50px; text-align: center; color:orangered;"> أنقلع من هنا</p>
+  <div class="crazy">😝</div>
+<p style="font-size: 50px; text-align: center;"> أذلف </p>
+<p style="font-size: 50px; text-align: center;" > ماعندك حياة يعني </p>
 </div>
-<div class="temple-weed"><img src="https://gifdb.com/images/thumbnail/tumbleweed-emoji-desert-9f4ehclkun14re38.gif" /></div>
+</div>
 </body>
 </html>
+
