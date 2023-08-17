@@ -1,84 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    @keyframes templeWeedAnimation {
-      0% {
-        right: -100px;
-        transform: rotate(0);
+  <head>
+    <style>
+      @keyframes templeWeedAnimation {
+        0% {
+          right: -100px;
+          transform: rotate(0);
+        }
+        100% {
+          right: calc(100% + 100px);
+          transform: rotate(360deg);
+        }
       }
-      100% {
-        right: calc(100% + 100px);
-        transform: rotate(360deg);
+
+      .crazy {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: templeWeedAnimation 5s linear infinite;
+        font-size: 100px;
+        color: green;
       }
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .crazy {
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      animation: templeWeedAnimation 5s linear infinite;
-      font-size: 100px;
-      color: green;
-    }
-    * {
-  box-sizing: border-box;
-}
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+      /* Style the side navigation */
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+      }
 
-/* Style the side navigation */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-}
+      /* Side navigation links */
+      .sidenav a {
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+      }
 
+      /* Change color on hover */
+      .sidenav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-/* Side navigation links */
-.sidenav a {
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-}
+      /* Style the content */
+      .content {
+        /* margin-left: 40%;
+        margin-right: 40%; */
+        padding-left: 50%;
+        background-image: url('https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif');
+        background-size: cover;
+        height: 100vh;
+        float: left;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:stretch;
 
-/* Change color on hover */
-.sidenav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+      }
+      .left-div {
+        float: left;
+        width: 50%;
+        background-image: url('https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif');
+        background-size: cover;
+        height: 100vh;
+      }
 
-/* Style the content */
-.content {
-  margin-left: 40%;
-  margin-right: 40%;
-  padding-left: 20px;
-
- 
-}
-.left-div {
-  float: left;
-  width: 50%;
-  background-image: url("https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif");
-  background-size:cover;
-  height: 100vh;
-}
-
-.right-div {
-  float: right;
-  width: 50%;
-}
-/* style image */
-/* .image-container {
+      .right-div {
+        float: right;
+        width: 50%;
+      }
+      /* style image */
+      /* .image-container {
   display: flex; 
   align-items: center; 
   justify-content: center;
@@ -91,36 +97,27 @@ body {
   max-height: 100%; 
   object-fit: contain; 
 } */
-
-  </style>
-</head>
-<body>
- <!-- <div class="sidenav">
+    </style>
+  </head>
+  <body>
+    <!-- <div class="sidenav">
  <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
  
 </div>  -->
-<h1  style="font-size: 50px; text-align: center;" >404</h1>
-<div style="display:flex; ">
-<div class="content" style="float: left;">
+    <h1 style="font-size: 50px; text-align: center">404</h1>
 
-  <!-- <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" /> -->
-  <p style="font-size: 50px; text-align: center; color:orangered;"> أنقلع من هنا</p>
-  <div class="crazy">😝</div>
-<p style="font-size: 50px; text-align: center;"> أذلف </p>
-<p style="font-size: 50px; text-align: center;" > ماعندك حياة يعني </p>
-
-  <!-- <div><img src="https://gifdb.com/images/thumbnail/tumbleweed-emoji-desert-9f4ehclkun14re38.gif" /></div> -->
+      <div class="content" style="float: left">
+        <!-- <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" /> -->
+        <p style="font-size: 50px; text-align: center; color: orangered">
+          أنقلع من هنا
+        </p>
+        <div class="crazy">😝</div>
+        <p style="font-size: 50px; text-align: center">أذلف</p>
+        <p style="font-size: 50px; text-align: center">ماعندك حياة يعني</p>
+        <!-- <div><img src="https://gifdb.com/images/thumbnail/tumbleweed-emoji-desert-9f4ehclkun14re38.gif" /></div> -->
+      </div>
  
-</div >
-<div class="content" style="float: right;">
-  <p style="font-size: 50px; text-align: center; color:orangered;"> أنقلع من هنا</p>
-  <div class="crazy">😝</div>
-<p style="font-size: 50px; text-align: center;"> أذلف </p>
-<p style="font-size: 50px; text-align: center;" > ماعندك حياة يعني </p>
-</div>
-</div>
-</body>
+  </body>
 </html>
-
