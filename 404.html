@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
+    <!-- <style>
       @keyframes templeWeedAnimation {
         0% {
           right: -100px;
@@ -15,109 +15,284 @@
 
       .crazy {
         position: absolute;
-        top: 50%;
+        top: 70%;
         transform: translate(-50%, -50%);
         animation: templeWeedAnimation 5s linear infinite;
-        font-size: 100px;
-        color: green;
+        font-size: 350px;
       }
+    
+
       * {
         box-sizing: border-box;
       }
-
       body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      /* Style the side navigation */
-      .sidenav {
-        height: 100%;
-        width: 200px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-      }
-
-      /* Side navigation links */
-      .sidenav a {
-        color: white;
-        padding: 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      /* Change color on hover */
-      .sidenav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* Style the content */
-      .content {
-        /* margin-left: 40%;
-        margin-right: 40%; */
-        padding-left: 50%;
-        background-image: url('https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif');
-        background-size: cover;
-        height: 100vh;
-        float: left;
-        width: 50%;
         display: flex;
-        flex-direction: column;
-        justify-content:stretch;
-
-      }
-      .left-div {
-        float: left;
-        width: 50%;
-        background-image: url('https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif');
-        background-size: cover;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
+        margin: 5%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .card {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+      }
+      p {
+        margin-left: 3em;
+        padding-top: 1em;
+        margin-top: 1em;
+        font-size: 30px;
+      }
+      .part2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1em;
+        /* padding: 1em; */
+        object-fit: cover;
+        height: 100%;
+      }
+      /* .part2 h4 {
+        margin: 1em;
+        font-size: 30px;
+      } */
+   
+      .part2 p {
+        margin: 1em;
+        font-size: 50px;
+        font-weight: bolder;
       }
 
-      .right-div {
-        float: right;
-        width: 50%;
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       }
-      /* style image */
-      /* .image-container {
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  width: 100%; 
-  height: 100vh;
+    </style> -->
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+    @keyframes templeWeedAnimation {
+        0% {
+          right: -100px;
+          transform: rotate(0);
+        }
+        100% {
+          right: calc(100% + 100px);
+          transform: rotate(360deg);
+        }
+      }
+
+      .crazy {
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        animation: templeWeedAnimation 5s linear infinite;
+        font-size: 100px;
+      }
+    
+      .bg-purple{
+    background: url(http://salehriaz.com/404Page/img/bg_purple.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: left top;
+    height: 100%;
+    overflow: hidden;
+    
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.image-container img {
-  max-width: 100%; 
-  max-height: 100%; 
-  object-fit: contain; 
-} */
-    </style>
-  </head>
-  <body>
-    <!-- <div class="sidenav">
- <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
- 
-</div>  -->
-    <h1 style="font-size: 50px; text-align: center">404</h1>
+html {
+  font-size: 16px;
+}
 
-      <div class="content" style="float: left">
-        <!-- <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" /> -->
-        <p style="font-size: 50px; text-align: center; color: orangered">
-          أنقلع من هنا
-        </p>
-        <div class="crazy">😝</div>
-        <p style="font-size: 50px; text-align: center">أذلف</p>
-        <p style="font-size: 50px; text-align: center">ماعندك حياة يعني</p>
-        <!-- <div><img src="https://gifdb.com/images/thumbnail/tumbleweed-emoji-desert-9f4ehclkun14re38.gif" /></div> -->
+body {
+  font-family: 'Combo', cursive;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  min-height: 50px;
+}
+
+.head-text {
+  text-transform: uppercase;
+  width: 200px;
+  height: auto;
+  padding: 20px;
+}
+
+.head-text, .main-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.scarecrow-img img {
+  width: 90%;
+  height: auto;
+}
+
+.error-text {
+  width: 50%;
+  direction: rtl;
+  text-align: right;
+}
+
+.error-text h2 {
+  width: 80%;
+  font-size: 3.75rem;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+.error-text p {
+  width: 50%;
+  padding: 5px;
+}
+
+button {
+		font-size: 30px;
+    font-family: 'Combo', cursive;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    z-index: 9;
+    border-radius: 10px;
+    background: #C0D7DD;
+    color: #33265C;
+    box-shadow: 0 0 10px 0 #C0D7DD;
+	margin-top: 20px;
+}
+button:hover {box-shadow: 0 0 20px 0 #C0D7DD;}
+footer {
+  padding: 15px;
+  text-align: center;min-height: 50px;
+  margin-top: auto;
+}
+
+.fa-copyright {
+  font-weight: lighter;
+}
+
+/* star mobile-first media queries */
+
+/* Small devices (landscape phones, 576px and up) */
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.9px) { 
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .error-text h2 {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 100%;
+    padding-top: 15px;
+  }
+
+  .error-text p {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 150%;
+    padding-top: 15px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .error-text h2 {
+    width: 100%;
+    line-height: 100%;
+    padding-top: 15px;
+  }
+
+  .error-text p {
+    width: 100%;
+    line-height: 150%;
+    padding-top: 15px;
+  }
+}
+ </style>
+</head>
+  <body class="bg-purple">
+
+        <header>
+          <div class="head-text">
+            <h1>404 Not Found</h1>
+          </div>
+        </header>
+      
+        <main>
+          <div class="main-wrapper">
+            <picture class="scarecrow-img">
+              <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" alt="Lost Man">
+            </picture>
+            <div class="error-text">
+              <h2> أنقلع من هنا
+            </h2>
+            <div class="crazy">😝</div>
+            <h3> أذلف</h3>
+            <h4>ماعندك حياة يعني</h4>
+              <span class="input-group-btn">
+                <button class="button.go-back" type="button">Go Back</button>
+              </span>
+            </div>
+          </div>
+      
+        </main>
+      
+        <footer>
+          <p><i class="far fa-copyright"></i>Reboot01</p>
+        </footer>
+     
+    <!-- <div class="card">
+      <p style="margin-left: 30%; font-size: 100px; font-weight: bold">
+        404 Not Found!
+      </p>
+      <div class="part2">
+        <img
+          src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif"
+          alt="Avatar"
+          style="width: 100%; height: 100%;"
+        />
+
+        <div style="text-align: right; margin-right: 50%; font-size: 25px">
+          <p>أنقلع من هنا</p>
+          <div class="crazy">😝</div>
+          <p>أذلف</p>
+          <p>ماعندك حياة يعني</p>
+        </div>
       </div>
- 
+    </div> -->
+    <!-- <div style="position:relative; align-items: center;">
+        <h2>404</h2>
+    </div> -->
+    <!-- <div class="card">
+  
+    <img src="https://media.tenor.com/XQLVLptLIBEAAAAC/maes-b-lost-in-a-field.gif" alt="Image">
+    <div class="text">
+      <p>أنقلع من هنا</p>
+      <div class="crazy">😝</div>
+      <p>أذلف</p>
+      <p>ماعندك حياة يعني</p>
+    </div>
+  </div> -->
   </body>
 </html>
